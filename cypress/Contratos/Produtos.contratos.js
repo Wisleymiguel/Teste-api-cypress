@@ -11,3 +11,4 @@ const produtosSchema = Joi.object({
     quantidade: Joi.number(),
 })
 export default produtosSchema;
+

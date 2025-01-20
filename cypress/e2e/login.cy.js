@@ -8,7 +8,7 @@ describe('Teste de API - Login', () => {
     method: 'POST',
     url:'login',
     body: {
-        "email": "fulano@qa.com",
+        "email": "Wisley-qa@ebac.com.br",
         "password": "teste"
       
     }

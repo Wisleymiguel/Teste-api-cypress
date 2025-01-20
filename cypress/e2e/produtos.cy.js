@@ -6,7 +6,7 @@ describe('Teste de API em Produtos ', () => {
   
     
     beforeEach(() => {
-      cy.token('fulano@qa.com', 'teste').then(tkn => {
+      cy.token('Wisley-qa@ebac.com.br', 'teste').then(tkn => {
         token = tkn;  // Armazenando o token
       });
     });
@@ -48,7 +48,7 @@ describe('Teste de API em Produtos ', () => {
         .then(response=>{
             let id = response.body._id
 
-
+          
             cy.request({
                 method: 'PUT',
                 url: `produtos/${id}`,
@@ -93,7 +93,7 @@ describe('Teste de API em Produtos ', () => {
 
     });
 
-    it.only('Deve validar  contratos de produtos com secesso ', () => {
+    it('Deve validar  contratos de produtos com secesso ', () => {
         cy.request('produtos').then(response=>{
             return contrato.validateAsync(response.body)
         })
