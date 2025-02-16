@@ -7,7 +7,8 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Wisleymiguel/Teste-api-cypress.git'
                 bat 'npm install -- force'
                 bat 'npm install -g json-server' 
-                bat 'npx cypress install' // Instala o binário do Cypress
+                bat 'npx cypress install' 
+                 bat 'start json-server --watch db.json --port 3000'
             }
         }
         stage('Test') {
